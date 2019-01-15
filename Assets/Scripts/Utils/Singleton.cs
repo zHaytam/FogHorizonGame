@@ -6,8 +6,9 @@
 /// </summary>
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
+
     // Check to see if we're about to be destroyed.
-    private static bool _mShuttingDown = false;
+    private static bool _mShuttingDown;
     private static readonly object MLock = new object();
     private static T _mInstance;
 
@@ -38,7 +39,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                         // Need to create a new GameObject to attach the singleton to.
                         var singletonObject = new GameObject();
                         _mInstance = singletonObject.AddComponent<T>();
-                        singletonObject.name = typeof(T).ToString() + " (Singleton)";
+                        singletonObject.name = typeof(T) + " (Singleton)";
 
                         // Make instance persistent.
                         DontDestroyOnLoad(singletonObject);
@@ -61,4 +62,5 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         _mShuttingDown = true;
     }
+
 }

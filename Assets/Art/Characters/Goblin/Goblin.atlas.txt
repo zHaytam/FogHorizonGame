@@ -6,14 +6,14 @@ filter: Linear,Linear
 repeat: none
 dagger
   rotate: true
-  xy: 209, 76
+  xy: 372, 100
   size: 26, 108
   orig: 26, 108
   offset: 0, 0
   index: -1
 eyes-closed
-  rotate: false
-  xy: 772, 89
+  rotate: true
+  xy: 452, 62
   size: 36, 14
   orig: 36, 14
   offset: 0, 0
@@ -27,21 +27,21 @@ head
   index: -1
 left-arm
   rotate: false
-  xy: 885, 89
+  xy: 411, 61
   size: 39, 37
   orig: 39, 37
   offset: 0, 0
   index: -1
 left-foot
   rotate: false
-  xy: 209, 2
+  xy: 482, 93
   size: 67, 33
   orig: 67, 33
   offset: 0, 0
   index: -1
 left-hand
   rotate: false
-  xy: 692, 83
+  xy: 794, 83
   size: 38, 43
   orig: 38, 43
   offset: 0, 0
@@ -55,72 +55,79 @@ left-lower-leg
   index: -1
 left-shoulder
   rotate: true
-  xy: 319, 71
+  xy: 363, 67
   size: 31, 46
   orig: 31, 46
   offset: 0, 0
   index: -1
 left-upper-leg
   rotate: true
-  xy: 372, 91
+  xy: 283, 28
   size: 35, 75
   orig: 35, 75
   offset: 0, 0
   index: -1
 neck
   rotate: false
-  xy: 732, 83
+  xy: 834, 83
   size: 38, 43
   orig: 38, 43
   offset: 0, 0
   index: -1
 pelvis
   rotate: false
-  xy: 583, 81
+  xy: 685, 81
   size: 64, 45
   orig: 64, 45
   offset: 0, 0
   index: -1
 right-arm
   rotate: true
-  xy: 831, 101
+  xy: 933, 101
   size: 25, 52
   orig: 25, 52
   offset: 0, 0
   index: -1
 right-foot
   rotate: false
-  xy: 449, 91
+  xy: 551, 91
   size: 65, 35
   orig: 65, 35
   offset: 0, 0
   index: -1
 right-hand
   rotate: true
-  xy: 926, 88
+  xy: 874, 65
   size: 38, 39
   orig: 38, 39
   offset: 0, 0
   index: -1
 right-lower-leg
   rotate: true
-  xy: 209, 37
+  xy: 283, 65
   size: 37, 78
   orig: 37, 78
   offset: 0, 0
   index: -1
 right-shoulder
   rotate: false
-  xy: 649, 82
+  xy: 751, 82
   size: 41, 44
   orig: 41, 44
   offset: 0, 0
   index: -1
 right-upper-leg
   rotate: true
-  xy: 516, 90
+  xy: 618, 90
   size: 36, 65
   orig: 36, 65
+  offset: 0, 0
+  index: -1
+shield
+  rotate: true
+  xy: 209, 32
+  size: 70, 72
+  orig: 70, 72
   offset: 0, 0
   index: -1
 spear
@@ -139,14 +146,14 @@ torso
   index: -1
 undie-straps
   rotate: false
-  xy: 772, 105
+  xy: 874, 105
   size: 57, 21
   orig: 57, 21
   offset: 0, 0
   index: -1
 undies
-  rotate: false
-  xy: 967, 95
+  rotate: true
+  xy: 987, 88
   size: 38, 31
   orig: 38, 31
   offset: 0, 0
