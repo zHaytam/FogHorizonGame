@@ -1,0 +1,153 @@
+
+Goblin.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dagger
+  rotate: true
+  xy: 209, 76
+  size: 26, 108
+  orig: 26, 108
+  offset: 0, 0
+  index: -1
+eyes-closed
+  rotate: false
+  xy: 772, 89
+  size: 36, 14
+  orig: 36, 14
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 36
+  size: 105, 66
+  orig: 105, 66
+  offset: 0, 0
+  index: -1
+left-arm
+  rotate: false
+  xy: 885, 89
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+left-foot
+  rotate: false
+  xy: 209, 2
+  size: 67, 33
+  orig: 67, 33
+  offset: 0, 0
+  index: -1
+left-hand
+  rotate: false
+  xy: 692, 83
+  size: 38, 43
+  orig: 38, 43
+  offset: 0, 0
+  index: -1
+left-lower-leg
+  rotate: true
+  xy: 2, 2
+  size: 32, 72
+  orig: 32, 72
+  offset: 0, 0
+  index: -1
+left-shoulder
+  rotate: true
+  xy: 319, 71
+  size: 31, 46
+  orig: 31, 46
+  offset: 0, 0
+  index: -1
+left-upper-leg
+  rotate: true
+  xy: 372, 91
+  size: 35, 75
+  orig: 35, 75
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 732, 83
+  size: 38, 43
+  orig: 38, 43
+  offset: 0, 0
+  index: -1
+pelvis
+  rotate: false
+  xy: 583, 81
+  size: 64, 45
+  orig: 64, 45
+  offset: 0, 0
+  index: -1
+right-arm
+  rotate: true
+  xy: 831, 101
+  size: 25, 52
+  orig: 25, 52
+  offset: 0, 0
+  index: -1
+right-foot
+  rotate: false
+  xy: 449, 91
+  size: 65, 35
+  orig: 65, 35
+  offset: 0, 0
+  index: -1
+right-hand
+  rotate: true
+  xy: 926, 88
+  size: 38, 39
+  orig: 38, 39
+  offset: 0, 0
+  index: -1
+right-lower-leg
+  rotate: true
+  xy: 209, 37
+  size: 37, 78
+  orig: 37, 78
+  offset: 0, 0
+  index: -1
+right-shoulder
+  rotate: false
+  xy: 649, 82
+  size: 41, 44
+  orig: 41, 44
+  offset: 0, 0
+  index: -1
+right-upper-leg
+  rotate: true
+  xy: 516, 90
+  size: 36, 65
+  orig: 36, 65
+  offset: 0, 0
+  index: -1
+spear
+  rotate: true
+  xy: 2, 104
+  size: 22, 368
+  orig: 22, 368
+  offset: 0, 0
+  index: -1
+torso
+  rotate: true
+  xy: 109, 32
+  size: 70, 98
+  orig: 70, 98
+  offset: 0, 0
+  index: -1
+undie-straps
+  rotate: false
+  xy: 772, 105
+  size: 57, 21
+  orig: 57, 21
+  offset: 0, 0
+  index: -1
+undies
+  rotate: false
+  xy: 967, 95
+  size: 38, 31
+  orig: 38, 31
+  offset: 0, 0
+  index: -1
