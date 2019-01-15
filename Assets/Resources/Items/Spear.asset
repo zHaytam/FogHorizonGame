@@ -15,6 +15,7 @@ MonoBehaviour:
   _id: 1
   _name: Spear
   _icon: {fileID: 21300000, guid: 40ed2f7d83a91b449bc36bd44db389ef, type: 3}
+  _attachmentName: spear
   _effects:
   - _type: 1
     _value: 12

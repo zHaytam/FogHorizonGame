@@ -109,6 +109,9 @@ namespace Assets.Scripts.Player.Inventory
             // Equip the new item
             _equipedItems.Add(item);
             RefreshEquipmentSlots();
+
+            // Activate the attachement
+            PlayerBehaviour.Instance.ChangeSlotAttachment(item.Type.ToSlotName(), item.AttachmentName);
             return true;
         }
 
@@ -127,6 +130,9 @@ namespace Assets.Scripts.Player.Inventory
 
             RefreshEquipmentSlots();
             RefreshItemSlots();
+
+            // De-activate the attachement
+            PlayerBehaviour.Instance.ChangeSlotAttachment(item.Type.ToSlotName(), null);
             return true;
         }
 
@@ -173,6 +179,8 @@ namespace Assets.Scripts.Player.Inventory
 
         private void RefreshEquipmentSlots()
         {
+            // Todo: Maybe only change the equiped/unequiped slot.
+
             if (_equipmentSlots == null || _equipedItems == null)
                 return;
 
