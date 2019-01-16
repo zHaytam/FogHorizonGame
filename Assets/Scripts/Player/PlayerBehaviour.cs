@@ -1,4 +1,5 @@
-﻿using Spine.Unity;
+﻿using Assets.Scripts.Player.Stats;
+using Spine.Unity;
 using UnityEngine;
 
 namespace Assets.Scripts.Player
@@ -73,6 +74,23 @@ namespace Assets.Scripts.Player
         private Animator _animator;
 
         #endregion
+
+        #region Properties
+
+        public PlayerCharacteristics Stats { get; }
+
+        #endregion
+
+        public PlayerBehaviour()
+        {
+            Stats = new PlayerCharacteristics
+            {
+                MaxHealth = 100,
+                CurrentHealth = 100,
+                MaxMana = 50,
+                CurrentMana = 50
+            };
+        }
 
         #region Unity Methods
 
