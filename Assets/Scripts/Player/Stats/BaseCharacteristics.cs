@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.Player.Stats
 {
@@ -23,6 +24,15 @@ namespace Assets.Scripts.Player.Stats
                 {
                     float oldFraction = HealthFraction;
                     _maxHealth = value;
+
+                    // In case the current health exceeds the maximum (e.g. un-equiping an item that
+                    if (_currentHealth > _maxHealth)
+                        _currentHealth = _maxHealth;
+
+                    // Ensure the health is at the same fraction
+                    else if (_currentHealth < _maxHealth && !Mathf.Approximately(oldFraction, HealthFraction))
+                        _currentHealth = (int)(_maxHealth * oldFraction);
+
                     HealthChanged?.Invoke(oldFraction, HealthFraction);
                 }
             }

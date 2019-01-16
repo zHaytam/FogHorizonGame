@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.Player.Stats
 {
@@ -23,6 +24,15 @@ namespace Assets.Scripts.Player.Stats
                 {
                     float oldFraction = ManaFraction;
                     _maxMana = value;
+
+                    // In case the current Mana exceeds the maximum (e.g. un-equiping an item that
+                    if (_currentMana > _maxMana)
+                        _currentMana = _maxMana;
+
+                    // Ensure the Mana is at the same fraction
+                    else if (_currentMana < _maxMana && !Mathf.Approximately(oldFraction, ManaFraction))
+                        _currentMana = (int)(_maxMana * oldFraction);
+
                     ManaChanged?.Invoke(oldFraction, ManaFraction);
                 }
             }

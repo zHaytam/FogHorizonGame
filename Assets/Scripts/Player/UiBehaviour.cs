@@ -43,7 +43,7 @@ namespace Assets.Scripts.Player
             // Todo: Only for tests
             if (Input.GetKeyDown(KeyCode.T))
             {
-                PlayerBehaviour.Instance.Stats.CurrentHealth -= 15;
+                PlayerBehaviour.Instance.Stats.CurrentHealth -= 20;
                 PlayerBehaviour.Instance.Stats.CurrentMana -= 15;
             }
             else if (Input.GetKeyDown(KeyCode.Y))
@@ -53,7 +53,7 @@ namespace Assets.Scripts.Player
             }
             else if (Input.GetKeyDown(KeyCode.U))
             {
-                PlayerBehaviour.Instance.Stats.MaxHealth += 15;
+                PlayerBehaviour.Instance.Stats.MaxHealth += 50;
                 PlayerBehaviour.Instance.Stats.MaxMana += 15;
             }
         }
