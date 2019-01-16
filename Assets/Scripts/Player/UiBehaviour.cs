@@ -30,8 +30,7 @@ namespace Assets.Scripts.Player
         {
             // Stats
             // -- Health
-            PlayerBehaviour.Instance.Stats.CurrentHealthChanged += Stats_CurrentHealthChanged;
-            PlayerBehaviour.Instance.Stats.MaxHealthChanged += Stats_MaxHealthChanged;
+            PlayerBehaviour.Instance.Stats.HealthChanged += Stats_HealthChanged;
             PlayerBehaviour.Instance.Stats.CurrentManaChanged += LerpManaBar;
 
             _healthText.text = $"{PlayerBehaviour.Instance.Stats.CurrentHealth} / {PlayerBehaviour.Instance.Stats.MaxHealth}";
@@ -61,7 +60,7 @@ namespace Assets.Scripts.Player
 
         #region Event Handlers
 
-        private void Stats_CurrentHealthChanged(float oldFraction, float newFraction)
+        private void Stats_HealthChanged(float oldFraction, float newFraction)
         {
             _healthText.text = $"{PlayerBehaviour.Instance.Stats.CurrentHealth} / {PlayerBehaviour.Instance.Stats.MaxHealth}";
 
@@ -78,11 +77,6 @@ namespace Assets.Scripts.Player
                 // Overtime action
                 _healthBar.fillAmount = val;
             }));
-        }
-
-        private void Stats_MaxHealthChanged(float oldValue, float newFraction)
-        {
-            _healthText.text = $"{PlayerBehaviour.Instance.Stats.CurrentHealth} / {PlayerBehaviour.Instance.Stats.MaxHealth}";
         }
 
         private void LerpManaBar(float oldFraction, float newFraction)

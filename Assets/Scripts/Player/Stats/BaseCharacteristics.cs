@@ -21,9 +21,9 @@ namespace Assets.Scripts.Player.Stats
             {
                 if (value > 0 && value != _maxHealth)
                 {
-                    float oldValue = _maxHealth;
+                    float oldFraction = HealthFraction;
                     _maxHealth = value;
-                    MaxHealthChanged?.Invoke(oldValue, _maxHealth);
+                    HealthChanged?.Invoke(oldFraction, HealthFraction);
                 }
             }
         }
@@ -38,7 +38,7 @@ namespace Assets.Scripts.Player.Stats
                 {
                     float oldFraction = HealthFraction;
                     _currentHealth = value;
-                    CurrentHealthChanged?.Invoke(oldFraction, HealthFraction);
+                    HealthChanged?.Invoke(oldFraction, HealthFraction);
                 }
             }
         }
@@ -49,8 +49,7 @@ namespace Assets.Scripts.Player.Stats
 
         #region Events
 
-        public event Action<float, float> MaxHealthChanged;
-        public event Action<float, float> CurrentHealthChanged;
+        public event Action<float, float> HealthChanged;
 
         #endregion
 
