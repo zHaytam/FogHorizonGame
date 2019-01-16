@@ -11,9 +11,9 @@ namespace Assets.Scripts.Player.Inventory
             switch (type)
             {
                 case EquipableItemType.Weapon:
-                    return "right_hand_weapon";
-                case EquipableItemType.Shield:
                     return "left_hand_weapon";
+                case EquipableItemType.Shield:
+                    return "right_hand_weapon";
                 default:
                     throw new Exception("Unhandled item object type.");
             }

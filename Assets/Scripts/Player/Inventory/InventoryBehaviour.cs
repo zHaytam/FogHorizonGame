@@ -155,6 +155,7 @@ namespace Assets.Scripts.Player.Inventory
             // Todo: Only for debug
             AddItem(0);
             AddItem(1);
+            AddItem(2);
         }
 
         private void RefreshItemSlots()

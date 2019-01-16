@@ -1,0 +1,10 @@
+ Notes:
+  ☐ that's some serious in air velocity change. (The way he turned half-jump and maintained his speed)
+
+Todo:
+  ☐ Inventory System
+    ✔ A list of items (plain/usable/equipable). @done (19-01-15 15:35)
+    ✔ Ability to equip/unequip items and also show/hide attachements. @done (19-01-15 16:35)
+    ☐ When the UI is done, player should be able to equip weapons directly in the weapons part instead of inventory.
+  ☐ UI System
+    ☐ Choose a design.
