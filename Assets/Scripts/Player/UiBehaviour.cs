@@ -18,6 +18,7 @@ namespace Assets.Scripts.Player
 
         [Header("Mana")]
         [SerializeField] private Image _manaBar;
+        [SerializeField] private Text _manaText;
         [SerializeField] private float _manaLerpTime;
         private Coroutine _lerpManaCoroutine;
 
@@ -31,9 +32,10 @@ namespace Assets.Scripts.Player
             // Stats
             // -- Health
             PlayerBehaviour.Instance.Stats.HealthChanged += Stats_HealthChanged;
-            PlayerBehaviour.Instance.Stats.CurrentManaChanged += LerpManaBar;
+            PlayerBehaviour.Instance.Stats.ManaChanged += Stats_ManaChanged;
 
             _healthText.text = $"{PlayerBehaviour.Instance.Stats.CurrentHealth} / {PlayerBehaviour.Instance.Stats.MaxHealth}";
+            _manaText.text = $"{PlayerBehaviour.Instance.Stats.CurrentMana} / {PlayerBehaviour.Instance.Stats.MaxMana}";
         }
 
         private void Update()
@@ -79,8 +81,10 @@ namespace Assets.Scripts.Player
             }));
         }
 
-        private void LerpManaBar(float oldFraction, float newFraction)
+        private void Stats_ManaChanged(float oldFraction, float newFraction)
         {
+            _manaText.text = $"{PlayerBehaviour.Instance.Stats.CurrentMana} / {PlayerBehaviour.Instance.Stats.MaxMana}";
+
             // Stop previous coroutine if needed
             if (_lerpManaCoroutine != null)
             {
@@ -89,15 +93,11 @@ namespace Assets.Scripts.Player
                 _lerpManaCoroutine = null;
             }
 
-            // Took damage?
-            if (newFraction < oldFraction)
+            _lerpManaCoroutine = StartCoroutine(Lerp.OverTime(oldFraction, newFraction, _manaLerpTime, val =>
             {
-                _lerpManaCoroutine = StartCoroutine(Lerp.OverTime(oldFraction, newFraction, _manaLerpTime, val =>
-                {
-                    // Overtime action
-                    _manaBar.fillAmount = val;
-                }));
-            }
+                // Overtime action
+                _manaBar.fillAmount = val;
+            }));
         }
 
         #endregion

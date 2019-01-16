@@ -21,9 +21,9 @@ namespace Assets.Scripts.Player.Stats
             {
                 if (value > 0 && value != _maxMana)
                 {
-                    float oldValue = _maxMana;
+                    float oldFraction = ManaFraction;
                     _maxMana = value;
-                    MaxManaChanged?.Invoke(oldValue, _maxMana);
+                    ManaChanged?.Invoke(oldFraction, ManaFraction);
                 }
             }
         }
@@ -38,7 +38,7 @@ namespace Assets.Scripts.Player.Stats
                 {
                     float oldFraction = ManaFraction;
                     _currentMana = value;
-                    CurrentManaChanged?.Invoke(oldFraction, ManaFraction);
+                    ManaChanged?.Invoke(oldFraction, ManaFraction);
                 }
             }
         }
@@ -49,8 +49,7 @@ namespace Assets.Scripts.Player.Stats
 
         #region Events
 
-        public event Action<float, float> MaxManaChanged;
-        public event Action<float, float> CurrentManaChanged;
+        public event Action<float, float> ManaChanged;
 
         #endregion
 
