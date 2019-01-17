@@ -11,7 +11,8 @@ Todo:
     ✔ Choose a design. @done (19-01-16 20:45)
     ✔ Health & Mana @done (19-01-16 20:46)
     ✔ Spells placeholders. @done (19-01-17 17:26)
-    
+    ☐ Avatar next to Health/Mana?
+
   ☐ Spells
     ☐ Passive Spell (Switch between 4 weapons, if obtained).
       ✔ The inventory should handle quiping 4 types of weapons. @done (19-01-17 19:14)
