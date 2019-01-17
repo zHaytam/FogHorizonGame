@@ -7,5 +7,8 @@ Todo:
     ✔ Ability to equip/unequip items and also show/hide attachements. @done (19-01-15 16:35)
     ☐ When the UI is done, player should be able to equip weapons directly in the weapons part instead of inventory.
   ☐ UI System
-    ☐ Choose a design.
-    ☐ 
+    ✔ Choose a design. @done (19-01-16 20:45)
+    ✔ Health & Mana @done (19-01-16 20:46)
+    ✔ Spells placeholders. @done (19-01-17 17:26)
+    ☐ Current Weapon & Other weapons (placeholders)
+    ☐ Avatar & Spells (placeholders)

@@ -22,7 +22,6 @@ namespace Assets.Scripts.Player
         [SerializeField] private float _manaLerpTime;
         private Coroutine _lerpManaCoroutine;
 
-
         #endregion
 
         #region Unity Methods
@@ -30,10 +29,10 @@ namespace Assets.Scripts.Player
         private void Awake()
         {
             // Stats
-            // -- Health
             PlayerBehaviour.Instance.Stats.HealthChanged += Stats_HealthChanged;
             PlayerBehaviour.Instance.Stats.ManaChanged += Stats_ManaChanged;
 
+            // Initial texts
             _healthText.text = $"{PlayerBehaviour.Instance.Stats.CurrentHealth} / {PlayerBehaviour.Instance.Stats.MaxHealth}";
             _manaText.text = $"{PlayerBehaviour.Instance.Stats.CurrentMana} / {PlayerBehaviour.Instance.Stats.MaxMana}";
         }
