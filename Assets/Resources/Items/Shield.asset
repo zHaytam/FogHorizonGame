@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882d4b7c07254b349bce363386a9d969, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  _id: 2
+  _id: 1
   _name: Shield
   _icon: {fileID: 21300000, guid: 3d1158e61e75d8d49bf23089f2f78a6b, type: 3}
   _attachmentName: shield
   _effects:
   - _type: 0
     _value: 50
-  _type: 1
+  _type: 4

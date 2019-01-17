@@ -10,7 +10,10 @@ namespace Assets.Scripts.Player.Inventory
         {
             switch (type)
             {
-                case EquipableItemType.Weapon:
+                case EquipableItemType.Sword:
+                case EquipableItemType.Bow:
+                case EquipableItemType.Staff:
+                case EquipableItemType.Daggers:
                     return "left_hand_weapon";
                 case EquipableItemType.Shield:
                     return "right_hand_weapon";

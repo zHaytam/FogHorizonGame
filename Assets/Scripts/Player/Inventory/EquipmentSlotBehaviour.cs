@@ -9,6 +9,7 @@ namespace Assets.Scripts.Player.Inventory
 
         #region Fields
 
+        [SerializeField] private Sprite _placeHolder;
         [SerializeField] private EquipableItemType _type;
 
         #endregion
@@ -36,6 +37,22 @@ namespace Assets.Scripts.Player.Inventory
             if (Item != null)
             {
                 InventoryBehaviour.Instance.UnequipItem(Type);
+            }
+        }
+
+        #endregion
+
+        #region Protected Methods
+
+        protected override void OnItemSet()
+        {
+            if (_item == null)
+            {
+                _icon.sprite = _placeHolder;
+            }
+            else
+            {
+                _icon.sprite = _item.Icon;
             }
         }
 

@@ -2,7 +2,10 @@
 {
     public enum EquipableItemType
     {
-        Weapon,
+        Sword,
+        Bow,
+        Staff,
+        Daggers,
         Shield,
         Helmet,
         Torso,

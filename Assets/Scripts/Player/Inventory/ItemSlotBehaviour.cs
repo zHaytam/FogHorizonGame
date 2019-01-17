@@ -10,8 +10,8 @@ namespace Assets.Scripts.Player.Inventory
 
         #region Fields
 
-        [SerializeField] private Image _icon;
-        private Item _item;
+        [SerializeField] protected Image _icon;
+        protected Item _item;
 
         #endregion
 
@@ -23,15 +23,7 @@ namespace Assets.Scripts.Player.Inventory
             set
             {
                 _item = value;
-                if (_item == null)
-                {
-                    _icon.enabled = false;
-                }
-                else
-                {
-                    _icon.sprite = _item.Icon;
-                    _icon.enabled = true;
-                }
+                OnItemSet();
             }
         }
 
@@ -58,6 +50,23 @@ namespace Assets.Scripts.Player.Inventory
             if (_item is EquipableItem equipableItem)
             {
                 InventoryBehaviour.Instance.EquipItem(equipableItem);
+            }
+        }
+
+        #endregion
+
+        #region Protected Methods
+
+        protected virtual void OnItemSet()
+        {
+            if (_item == null)
+            {
+                _icon.enabled = false;
+            }
+            else
+            {
+                _icon.sprite = _item.Icon;
+                _icon.enabled = true;
             }
         }
 
