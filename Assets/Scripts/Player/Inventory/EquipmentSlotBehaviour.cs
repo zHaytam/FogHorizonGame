@@ -1,4 +1,6 @@
-﻿using Assets.Scripts.Player.Inventory.Items;
+﻿using System.Collections.Generic;
+using Assets.Scripts.ContextMenu;
+using Assets.Scripts.Player.Inventory.Items;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -28,18 +30,6 @@ namespace Assets.Scripts.Player.Inventory
             gameObject.name = $"{Type}Slot";
         }
 
-        public override void OnPointerClick(PointerEventData eventData)
-        {
-            if ((eventData.button != PointerEventData.InputButton.Right || eventData.clickCount != 1) &&
-                (eventData.button != PointerEventData.InputButton.Left || eventData.clickCount != 2))
-                return;
-
-            if (Item != null)
-            {
-                InventoryBehaviour.Instance.UnequipItem(Type);
-            }
-        }
-
         #endregion
 
         #region Protected Methods
@@ -54,6 +44,15 @@ namespace Assets.Scripts.Player.Inventory
             {
                 _icon.sprite = _item.Icon;
             }
+        }
+
+        protected override List<ContextMenuItem> GetContextMenuItems()
+        {
+            return new List<ContextMenuItem>
+            {
+                new ContextMenuItem("Unequip", () => InventoryBehaviour.Instance.UnequipItem(Type)),
+                new ContextMenuItem("Drop", DropItem)
+            };
         }
 
         #endregion

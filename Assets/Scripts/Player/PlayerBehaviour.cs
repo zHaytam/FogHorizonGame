@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Player.Stats;
+﻿using Assets.Scripts.Player.Inventory;
+using Assets.Scripts.Player.Stats;
 using Spine.Unity;
 using UnityEngine;
 
@@ -102,6 +103,9 @@ namespace Assets.Scripts.Player
 
         protected override void ComputeVelocity()
         {
+            if (InventoryBehaviour.Instance.IsOpen)
+                return;
+
             Vector2 move = Vector2.zero;
 
             move.x = Input.GetAxis("Horizontal");

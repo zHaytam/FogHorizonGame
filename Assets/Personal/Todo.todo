@@ -1,4 +1,4 @@
- Notes:
+Notes:
   ☐ that's some serious in air velocity change. (The way he turned half-jump and maintained his speed)
 
 Todo:
@@ -6,6 +6,18 @@ Todo:
     ✔ A list of items (plain/usable/equipable). @done (19-01-15 15:35)
     ✔ Ability to equip/unequip items and also show/hide attachements. @done (19-01-15 16:35)
     ✔ Add background images in each equipment slot. @done (19-01-17 19:14)
+    ✘ Drag & Drop item to equip. @cancelled (19-01-18 13:41)
+      ✘ If we drag an item, close inventory and re-open, it will be floating. @cancelled (19-01-18 13:41)
+    ✘ Maybe switch the available items from Resources to a Database. @cancelled (19-01-18 13:41)
+    ✘ Tooltip on items (when clicked). @cancelled (19-01-18 13:42)
+    ✔ Make the inventory work without a mouse: @done (19-01-19 00:23)
+      ✔ When the inventory opens, movements input will now move through the items / equipments. @done (19-01-18 14:40)
+      ✔ The character shouldn't move. @done (19-01-18 14:39)
+      ☐ Re-selecting the first item when the inventory opens doesn't show (but it is selected). @bug or @unwatend_behaviour
+        Hitting space after will not show the context menu (or at least not in the position we want).
+      ✔ Clicking "space?" should open a context menu with the appropriate actions for each type of item/slot. @done (19-01-18 22:48)
+        ✔ Pressing Space to "click" a context menu item shows it again (after). @unwanted_behaviour @done (19-01-18 23:54)
+      ✔ Hide context menu when the inventory is closed. @done (19-01-19 00:22)
 
   ☐ UI System
     ✔ Choose a design. @done (19-01-16 20:45)
@@ -14,6 +26,10 @@ Todo:
     ☐ Avatar next to Health/Mana?
 
   ☐ Spells
+    ☐ Tooltip on spells.
+    ☐ List of all acquired spells (when U is pressed).
+    ✘ Drag & Drop spell from list to UI. @cancelled (19-01-18 17:18)
+    ✘ Drag & Drop spell from UI to outside (to remove). @cancelled (19-01-18 17:18)
     ☐ Passive Spell (Switch between 4 weapons, if obtained).
       ✔ The inventory should handle quiping 4 types of weapons. @done (19-01-17 19:14)
       ☐ Activating the passive spell should give you a "ui" where you can select one of the 4 OTHER weapons using moving keys.

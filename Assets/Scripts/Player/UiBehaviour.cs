@@ -35,6 +35,9 @@ namespace Assets.Scripts.Player
             // Initial texts
             _healthText.text = $"{PlayerBehaviour.Instance.Stats.CurrentHealth} / {PlayerBehaviour.Instance.Stats.MaxHealth}";
             _manaText.text = $"{PlayerBehaviour.Instance.Stats.CurrentMana} / {PlayerBehaviour.Instance.Stats.MaxMana}";
+
+            // Lock cursor
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void Update()

@@ -10,7 +10,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     // Check to see if we're about to be destroyed.
     private static bool _mShuttingDown;
     private static readonly object MLock = new object();
-    private static T _mInstance;
+    protected static T _mInstance;
 
     /// <summary>
     /// Access singleton instance through this propriety.

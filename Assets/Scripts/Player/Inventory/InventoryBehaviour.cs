@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.ContextMenu;
 using Assets.Scripts.Player.Inventory.Items;
 using UnityEngine;
 
@@ -27,6 +28,12 @@ namespace Assets.Scripts.Player.Inventory
 
         #endregion
 
+        #region Properties
+
+        public bool IsOpen { get; private set; }
+
+        #endregion
+
         #region Unity Methods
 
         private void Awake()
@@ -42,6 +49,25 @@ namespace Assets.Scripts.Player.Inventory
             if (Input.GetKeyDown(KeyCode.I))
             {
                 _childUi.SetActive(!_childUi.activeSelf);
+                IsOpen = _childUi.activeSelf;
+
+                // Select first item
+                if (IsOpen)
+                {
+                    _itemSlots[0].Select();
+                }
+
+                if (!_childUi.activeSelf)
+                {
+                    // Reset the icons positions to not leave items floating
+                    foreach (var itemSlot in _itemSlots)
+                    {
+                        itemSlot.ResetIconLocalPosition();
+                    }
+
+                    // Hide the context menu
+                    ContextMenuBehaviour.Instance.Hide();
+                }
             }
         }
 
