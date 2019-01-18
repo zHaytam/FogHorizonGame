@@ -1,8 +1,12 @@
 Notes:
   ☐ that's some serious in air velocity change. (The way he turned half-jump and maintained his speed)
 
+Bugs:
+  ☐ Re-selecting the first item when the inventory opens doesn't show (but it is selected). @low
+    Hitting space after will not show the context menu (or at least not in the position we want).
+
 Todo:
-  ☐ Inventory System
+  ✔ Inventory System @done (19-01-19 00:27)
     ✔ A list of items (plain/usable/equipable). @done (19-01-15 15:35)
     ✔ Ability to equip/unequip items and also show/hide attachements. @done (19-01-15 16:35)
     ✔ Add background images in each equipment slot. @done (19-01-17 19:14)
@@ -13,8 +17,6 @@ Todo:
     ✔ Make the inventory work without a mouse: @done (19-01-19 00:23)
       ✔ When the inventory opens, movements input will now move through the items / equipments. @done (19-01-18 14:40)
       ✔ The character shouldn't move. @done (19-01-18 14:39)
-      ☐ Re-selecting the first item when the inventory opens doesn't show (but it is selected). @bug or @unwatend_behaviour
-        Hitting space after will not show the context menu (or at least not in the position we want).
       ✔ Clicking "space?" should open a context menu with the appropriate actions for each type of item/slot. @done (19-01-18 22:48)
         ✔ Pressing Space to "click" a context menu item shows it again (after). @unwanted_behaviour @done (19-01-18 23:54)
       ✔ Hide context menu when the inventory is closed. @done (19-01-19 00:22)

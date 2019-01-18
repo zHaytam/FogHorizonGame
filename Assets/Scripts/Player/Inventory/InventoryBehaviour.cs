@@ -46,28 +46,28 @@ namespace Assets.Scripts.Player.Inventory
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            if (!Input.GetKeyDown(KeyCode.I))
+                return;
+
+            _childUi.SetActive(!_childUi.activeSelf);
+            IsOpen = _childUi.activeSelf;
+
+            // Select first item
+            if (IsOpen)
             {
-                _childUi.SetActive(!_childUi.activeSelf);
-                IsOpen = _childUi.activeSelf;
+                _itemSlots[0].Select();
+            }
 
-                // Select first item
-                if (IsOpen)
+            if (!_childUi.activeSelf)
+            {
+                // Reset the icons positions to not leave items floating
+                foreach (var itemSlot in _itemSlots)
                 {
-                    _itemSlots[0].Select();
+                    itemSlot.ResetIconLocalPosition();
                 }
 
-                if (!_childUi.activeSelf)
-                {
-                    // Reset the icons positions to not leave items floating
-                    foreach (var itemSlot in _itemSlots)
-                    {
-                        itemSlot.ResetIconLocalPosition();
-                    }
-
-                    // Hide the context menu
-                    ContextMenuBehaviour.Instance.Hide();
-                }
+                // Hide the context menu
+                ContextMenuBehaviour.Instance.Hide();
             }
         }
 

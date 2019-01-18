@@ -60,7 +60,6 @@ namespace Assets.Scripts.ContextMenu
                 btn.onClick.AddListener(() =>
                 {
                     item.Action();
-                    Debug.Log("Hiding ContextMenu after action.");
                     Hide();
                 });
 

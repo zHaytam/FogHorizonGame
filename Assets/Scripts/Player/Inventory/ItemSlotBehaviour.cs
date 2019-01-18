@@ -40,7 +40,6 @@ namespace Assets.Scripts.Player.Inventory
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("ItemSlotBehaviour.Update.SpaceDown");
                 ContextMenuBehaviour.Instance.Show(GetContextMenuItems(), transform.position);
             }
         }
