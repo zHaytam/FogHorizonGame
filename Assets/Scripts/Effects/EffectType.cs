@@ -1,6 +1,6 @@
-﻿namespace Assets.Scripts.Player.Inventory.Items
+﻿namespace Assets.Scripts.Effects
 {
-    public enum UsableItemEffectType
+    public enum EffectType
     {
         AddHealth,
         DamageEnnemy,

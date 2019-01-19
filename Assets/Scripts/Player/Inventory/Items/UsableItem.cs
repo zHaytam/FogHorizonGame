@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Assets.Scripts.ContextMenu;
+﻿using Assets.Scripts.Effects;
 using UnityEngine;
 
 namespace Assets.Scripts.Player.Inventory.Items
@@ -10,13 +9,13 @@ namespace Assets.Scripts.Player.Inventory.Items
 
         #region Fields
 
-        [SerializeField] private UsableItemEffect[] _effects;
+        [SerializeField] private Effect[] _effects;
 
         #endregion
 
         #region Properties
 
-        public UsableItemEffect[] Effects => _effects;
+        public Effect[] Effects => _effects;
 
         #endregion
 

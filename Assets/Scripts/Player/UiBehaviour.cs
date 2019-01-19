@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Utils;
+﻿using System.Collections.Generic;
+using Assets.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,26 +39,6 @@ namespace Assets.Scripts.Player
 
             // Lock cursor
             Cursor.lockState = CursorLockMode.Locked;
-        }
-
-        private void Update()
-        {
-            // Todo: Only for tests
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                PlayerBehaviour.Instance.Stats.CurrentHealth -= 20;
-                PlayerBehaviour.Instance.Stats.CurrentMana -= 15;
-            }
-            else if (Input.GetKeyDown(KeyCode.Y))
-            {
-                PlayerBehaviour.Instance.Stats.CurrentHealth += 15;
-                PlayerBehaviour.Instance.Stats.CurrentMana += 15;
-            }
-            else if (Input.GetKeyDown(KeyCode.U))
-            {
-                PlayerBehaviour.Instance.Stats.MaxHealth += 50;
-                PlayerBehaviour.Instance.Stats.MaxMana += 15;
-            }
         }
 
         #endregion
@@ -101,6 +82,12 @@ namespace Assets.Scripts.Player
                 _manaBar.fillAmount = val;
             }));
         }
+
+        #endregion
+
+        #region Private Methods
+
+
 
         #endregion
 

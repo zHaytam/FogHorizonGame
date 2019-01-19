@@ -932,7 +932,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258756415}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -941,7 +941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1037, y: 540}
+  m_AnchoredPosition: {x: 1036.9999, y: 540}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258756417
@@ -1976,7 +1976,7 @@ GameObject:
   - component: {fileID: 494759879}
   - component: {fileID: 494759878}
   m_Layer: 5
-  m_Name: SpellSlot (3)
+  m_Name: ThirdSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3709,7 +3709,7 @@ GameObject:
   - component: {fileID: 887170611}
   - component: {fileID: 887170610}
   m_Layer: 5
-  m_Name: SpellSlot (1)
+  m_Name: FirstSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5839,7 +5839,7 @@ GameObject:
   - component: {fileID: 1261567291}
   - component: {fileID: 1261567290}
   m_Layer: 5
-  m_Name: SpellSlot (2)
+  m_Name: SecondSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8316,7 +8316,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1aaec4e096390fa48986f596f72bf414, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9980,7 +9980,7 @@ GameObject:
   - component: {fileID: 2027617414}
   - component: {fileID: 2027617413}
   m_Layer: 5
-  m_Name: SpellSlot (4)
+  m_Name: FourthSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10281,6 +10281,7 @@ GameObject:
   - component: {fileID: 2106836773}
   - component: {fileID: 2106836774}
   - component: {fileID: 2106836775}
+  - component: {fileID: 2106836776}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10449,6 +10450,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.035428703, y: 1.3069084}
   m_Size: {x: 1.2356263, y: 2.7004418}
   m_Direction: 0
+--- !u!114 &2106836776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106836767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d994effde1b9349b9b3f566f6542ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2126417092
 GameObject:
   m_ObjectHideFlags: 0

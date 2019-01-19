@@ -178,7 +178,7 @@ namespace Assets.Scripts.Player.Inventory
             _items = new List<Item>(_itemSlots.Length);
             _equipedItems = new List<EquipableItem>(_equipmentSlots.Length);
 
-            // Todo: Only for debug
+            // Todo: Only for testing
             AddItem(0);
             AddItem(1);
         }
