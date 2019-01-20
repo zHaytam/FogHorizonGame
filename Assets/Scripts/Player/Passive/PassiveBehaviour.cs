@@ -13,7 +13,7 @@ namespace Assets.Scripts.Player.Passive
         #region Fields
 
         [SerializeField] private Button[] _slots;
-        private Image[] _slotImages;
+        [SerializeField] private Image[] _slotImages;
         private GameObject _child;
 
         #endregion
@@ -39,12 +39,12 @@ namespace Assets.Scripts.Player.Passive
 
             if (!IsOpen)
             {
-                // Set equipables
-                SetWeapons();
-
                 // Show
                 _child.SetActive(true);
                 IsOpen = true;
+
+                // Set equipables
+                SetWeapons();
 
                 // Select fist
                 _slots[4].Select();
@@ -52,19 +52,6 @@ namespace Assets.Scripts.Player.Passive
             else
             {
                 Close();
-            }
-        }
-
-        private void OnValidate()
-        {
-            // Todo: Should be removed
-            _slots = gameObject.GetComponentsInChildren<Button>();
-            _slotImages = new Image[4];
-
-            for (int i = 0; i < 4; i++)
-            {
-                _slotImages[i] = _slots[i].transform.GetChild(0).GetComponent<Image>();
-                _slotImages[i].preserveAspect = true;
             }
         }
 
