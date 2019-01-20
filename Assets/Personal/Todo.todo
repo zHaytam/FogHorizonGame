@@ -6,7 +6,7 @@ Bugs:
     Hitting space after will not show the context menu (or at least not in the position we want).
     Must de-select after closing inventory!
   ☐ You can move from the context menu's items to the inventory's slots using keys, shouldn't be possible. @low
-  ☐ Since the walking area has ups & downs, sometimes the player jumps (or is in the jumping state) when he's not grounded.
+  ✔ Since the walking area has ups & downs, sometimes the player jumps (or is in the jumping state) when he's not grounded. @high @done (19-01-20 21:41)
 
 Todo:
   Inventory System:
