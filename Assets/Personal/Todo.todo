@@ -6,6 +6,7 @@ Bugs:
     Hitting space after will not show the context menu (or at least not in the position we want).
     Must de-select after closing inventory!
   ☐ You can move from the context menu's items to the inventory's slots using keys, shouldn't be possible. @low
+  ☐ Since the walking area has ups & downs, sometimes the player jumps (or is in the jumping state) when he's not grounded.
 
 Todo:
   Inventory System:
@@ -25,6 +26,7 @@ Todo:
         ✔ Pressing Space to "click" a context menu item shows it again (after). @unwanted_behaviour @done (19-01-18 23:54)
       ✔ Hide context menu when the inventory is closed. @done (19-01-19 00:22)
     ☐ Add quantities to items instead of duplications.
+    ☐ Equipable item effects.
 
   UI System:
     ✔ Choose a design. @done (19-01-16 20:45)
@@ -38,7 +40,7 @@ Todo:
     ✔ When the UI is open, select the current weapon instead of always the fist. @done (19-01-20 12:47)
     ✔ Add the passive's icon in the first spell placeholder. @done (19-01-20 12:49)
 
-  Spells:
+  Spell System:
     ☐ Tooltip on spells.
     ☐ List of all acquired spells (when U is pressed).
     ☐ Ability to acquire available spells.
@@ -47,3 +49,14 @@ Todo:
     ✘ Drag & Drop spell from list to UI. @cancelled (19-01-18 17:18)
     ✘ Drag & Drop spell from UI to outside (to remove). @cancelled (19-01-18 17:18)
     ☐ Ability to use spells.
+
+  Camera:
+    ✔ Should follow the player. @done (19-01-20 19:11)
+    ✔ Game boundaries. @done (19-01-20 20:51)
+
+  Character:
+    ☐ Ability to dash in a direction when pressing the move button twice (fast) with trail/animation.
+
+  Levels:
+    ✔ Design a farm level placeholder. @done (19-01-20 19:11)
+      It should have a parallax effect.

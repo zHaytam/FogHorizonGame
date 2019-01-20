@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - InventoryUI
-  - 
-  - 
+  - Player
+  - CameraBoundaries
   - 
   - 
   - 
