@@ -4,6 +4,7 @@ using System.Linq;
 using Assets.Scripts.ContextMenu;
 using Assets.Scripts.Player.Inventory.Items;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.Player.Inventory
 {
@@ -15,6 +16,7 @@ namespace Assets.Scripts.Player.Inventory
         private Item[] _availableItems;
         [SerializeField] private List<Item> _items; // Todo: Only for debug
         private List<EquipableItem> _equipedItems;
+        private EquipableItem _currentWeapon;
 
         // Items
         [SerializeField] private Transform _itemsGrid;
@@ -31,6 +33,31 @@ namespace Assets.Scripts.Player.Inventory
         #region Properties
 
         public bool IsOpen { get; private set; }
+
+        public EquipableItem CurrentWeapon
+        {
+            get => _currentWeapon;
+            set
+            {
+                if (value == _currentWeapon)
+                    return;
+
+                string attachmentName = null;
+                if (value != null)
+                {
+                    var equipedWeapon = GetEquipedItem(value.Type);
+                    if (equipedWeapon == null || equipedWeapon != value)
+                        throw new Exception("Weapon not equiped.");
+
+                    attachmentName = equipedWeapon.AttachmentName;
+                }
+
+                _currentWeapon = value;
+                PlayerBehaviour.Instance.ChangeSlotAttachment("left_hand_weapon", attachmentName);
+            }
+        }
+
+        public bool HasWeapon => CurrentWeapon != null;
 
         #endregion
 
@@ -52,10 +79,15 @@ namespace Assets.Scripts.Player.Inventory
             _childUi.SetActive(!_childUi.activeSelf);
             IsOpen = _childUi.activeSelf;
 
-            // Select first item
+            // Select first slot
             if (IsOpen)
             {
                 _itemSlots[0].Select();
+            }
+            // De-select last slot
+            else
+            {
+                EventSystem.current.SetSelectedGameObject(null);
             }
 
             if (!_childUi.activeSelf)
@@ -73,6 +105,7 @@ namespace Assets.Scripts.Player.Inventory
 
         private void OnValidate()
         {
+            // Todo: Should be removed
             // Item slots
             if (_itemsGrid != null)
                 _itemSlots = _itemsGrid.GetComponentsInChildren<ItemSlotBehaviour>();
@@ -136,8 +169,10 @@ namespace Assets.Scripts.Player.Inventory
             _equipedItems.Add(item);
             RefreshEquipmentSlots();
 
-            // Activate the attachement
-            PlayerBehaviour.Instance.ChangeSlotAttachment(item.Type.ToSlotName(), item.AttachmentName);
+            // Activate the attachement (if not a weapon)
+            if (!item.Type.IsWeapon())
+                PlayerBehaviour.Instance.ChangeSlotAttachment(item.Type.ToSlotName(), item.AttachmentName);
+
             return true;
         }
 

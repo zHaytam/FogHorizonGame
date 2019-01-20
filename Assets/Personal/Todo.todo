@@ -2,8 +2,10 @@ Notes:
   ☐ that's some serious in air velocity change. (The way he turned half-jump and maintained his speed)
 
 Bugs:
-  ☐ Re-selecting the first item when the inventory opens doesn't show (but it is selected). @low
+  ✔ Re-selecting the first item when the inventory opens doesn't show (but it is selected). @low @done (19-01-20 01:32)
     Hitting space after will not show the context menu (or at least not in the position we want).
+    Must de-select after closing inventory!
+  ☐ You can move from the context menu's items to the inventory's slots using keys, shouldn't be possible. @low
 
 Todo:
   Inventory System:
@@ -15,6 +17,7 @@ Todo:
     ✘ Maybe switch the available items from Resources to a Database. @cancelled (19-01-18 13:41)
     ✘ Tooltip on items (when clicked). @cancelled (19-01-18 13:42)
     ☐ Tooltip on items (maybe a new menu item "Details" that shows the item's details in a new window).
+    ✔ Weapon equipments should not change the character until they are the current weapon (null = fist). @done (19-01-19 23:46)
     ✔ Make the inventory work without a mouse: @done (19-01-19 00:23)
       ✔ When the inventory opens, movements input will now move through the items / equipments. @done (19-01-18 14:40)
       ✔ The character shouldn't move. @done (19-01-18 14:39)
@@ -30,8 +33,9 @@ Todo:
     ☐ Avatar next to Health/Mana?
 
   Player's Passive:
-    ☐ Pressing "1/&" should bring a UI with 4 weapons (or fist) that aren't currently equiped.
-      This UI should be "navigable" by movement keys and pressing "Space" should equip that other weapon/first.
+    ✔ Pressing "1/&" should bring a UI with 4 weapons + fist. @done (19-01-20 01:32)
+      This UI should be "navigable" by movement keys and pressing "Space" should equip that weapon/first.
+    ☐ When the UI is open, select the current weapon instead of always the fist.
 
   Spells:
     ☐ Tooltip on spells.

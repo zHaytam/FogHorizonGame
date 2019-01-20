@@ -19,4 +19,4 @@ MonoBehaviour:
   _effects:
   - _type: 1
     _value: 10
-  _type: 3
+  _type: 0

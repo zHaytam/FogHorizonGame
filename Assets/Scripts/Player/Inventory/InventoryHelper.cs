@@ -17,9 +17,15 @@ namespace Assets.Scripts.Player.Inventory
                     return "left_hand_weapon";
                 case EquipableItemType.Shield:
                     return "right_hand_weapon";
+                    // Todo: other types
                 default:
                     throw new Exception("Unhandled item object type.");
             }
+        }
+
+        public static bool IsWeapon(this EquipableItemType type)
+        {
+            return type == EquipableItemType.Bow || type == EquipableItemType.Daggers || type == EquipableItemType.Staff || type == EquipableItemType.Sword;
         }
 
     }

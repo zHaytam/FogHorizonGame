@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Player.Inventory;
+using Assets.Scripts.Player.Passive;
 using Assets.Scripts.Player.Stats;
 using Spine.Unity;
 using UnityEngine;
@@ -103,7 +104,7 @@ namespace Assets.Scripts.Player
 
         protected override void ComputeVelocity()
         {
-            if (InventoryBehaviour.Instance.IsOpen)
+            if (InventoryBehaviour.Instance.IsOpen || PassiveBehaviour.Instance.IsOpen)
                 return;
 
             Vector2 move = Vector2.zero;
