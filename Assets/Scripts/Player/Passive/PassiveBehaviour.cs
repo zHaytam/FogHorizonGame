@@ -45,9 +45,6 @@ namespace Assets.Scripts.Player.Passive
 
                 // Set equipables
                 SetWeapons();
-
-                // Select fist
-                _slots[4].Select();
             }
             else
             {
@@ -61,10 +58,15 @@ namespace Assets.Scripts.Player.Passive
 
         private void SetWeapons()
         {
+            var currentSlot = _slots[4];
+
             for (int i = 0; i < 4; i++)
             {
                 var type = (EquipableItemType)i;
                 var item = InventoryBehaviour.Instance.GetEquipedItem(type);
+
+                if (InventoryBehaviour.Instance.CurrentWeapon != null && item == InventoryBehaviour.Instance.CurrentWeapon)
+                    currentSlot = _slots[i];
 
                 if (item == null)
                 {
@@ -91,6 +93,9 @@ namespace Assets.Scripts.Player.Passive
                 InventoryBehaviour.Instance.CurrentWeapon = null;
                 Close();
             });
+    
+            // Select current weapon
+            currentSlot.Select();
         }
 
         private void Close()

@@ -35,7 +35,8 @@ Todo:
   Player's Passive:
     ✔ Pressing "1/&" should bring a UI with 4 weapons + fist. @done (19-01-20 01:32)
       This UI should be "navigable" by movement keys and pressing "Space" should equip that weapon/first.
-    ☐ When the UI is open, select the current weapon instead of always the fist.
+    ✔ When the UI is open, select the current weapon instead of always the fist. @done (19-01-20 12:47)
+    ✔ Add the passive's icon in the first spell placeholder. @done (19-01-20 12:49)
 
   Spells:
     ☐ Tooltip on spells.
